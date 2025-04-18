@@ -54,7 +54,7 @@ const puzzles = [
         id: 2,
         title: "Bishop's Deadly Pin",
         difficulty: "medium",
-        image: "images/current-puzzles/puzzle2.png",
+        image: "images/current-puzzles/Bishop's-Deadly-Pin.png",
         description: "Great position! Can you find a way to restrict your opponent's pieces?",
         hint: "Use your bishop to pin the queen to the king"
     },
@@ -62,7 +62,7 @@ const puzzles = [
         id: 3,
         title: "Queen's Gambit",
         difficulty: "hard",
-        image: "images/current-puzzles/puzzle3.png",
+        image: "images/current-puzzles/Queen's-gambit.png",
         description: "Challenge yourself! Sometimes the best move is the most unexpected one.",
         hint: "Start with a queen sacrifice"
     },
@@ -70,7 +70,7 @@ const puzzles = [
         id: 4,
         title: "Rook's Revenge",
         difficulty: "medium",
-        image: "images/current-puzzles/puzzle4.png",
+        image: "images/current-puzzles/Rook's-revenge.png",
         description: "You're doing great! Look for a way to put pressure on your opponent's position.",
         hint: "Look for a move that threatens the queen"
     },
@@ -78,7 +78,7 @@ const puzzles = [
         id: 5,
         title: "Knight's Double Attack",
         difficulty: "easy",
-        image: "images/current-puzzles/puzzle5.png",
+        image: "images/current-puzzles/Double-knight-attack.png",
         description: "Perfect opportunity! Your knight can create a powerful tactical threat.",
         hint: "Find a square where your knight attacks two pieces"
     },
@@ -86,7 +86,7 @@ const puzzles = [
         id: 6,
         title: "Bishop's Discovery",
         difficulty: "hard",
-        image: "images/current-puzzles/puzzle6.png",
+        image: "images/current-puzzles/Bishop's-discovery.png",
         description: "Think outside the box! The solution might be hiding in plain sight.",
         hint: "Move a piece to reveal an attack from behind"
     },
@@ -94,7 +94,7 @@ const puzzles = [
         id: 7,
         title: "Rook's Back Rank",
         difficulty: "medium",
-        image: "images/current-puzzles/puzzle7.png",
+        image: "images/current-puzzles/Rook's-back-rank.png",
         description: "You're almost there! Look for a way to deliver the final blow.",
         hint: "Look for a way to attack the back rank"
     },
@@ -102,7 +102,7 @@ const puzzles = [
         id: 8,
         title: "Queen's Sacrifice",
         difficulty: "hard",
-        image: "images/current-puzzles/puzzle8.png",
+        image: "images/current-puzzles/Queen's-sacrifice.png",
         description: "Trust your instincts! The most beautiful moves are often the most daring.",
         hint: "Consider sacrificing your queen for a forced mate"
     }
