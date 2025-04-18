@@ -124,19 +124,32 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s;
     cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .puzzle-card:hover {
     transform: translateY(-5px);
 }
 
-.puzzle-svg {
+.puzzle-image {
+    position: relative;
+    flex: 1 1 auto;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.puzzle-image img {
     width: 100%;
-    height: 200px;
-    background: #f8f8f8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.3));
+    transition: filter 0.3s ease;
+}
+
+.puzzle-image img:hover {
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5)) blur(2px);
 }
 
 .puzzle-info {
@@ -174,8 +187,8 @@ header {
 
 /* Chess Panel */
 .chess-panel {
-    display: grid;
-    grid-template-columns: 1fr 300px;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     background: white;
     padding: 20px;

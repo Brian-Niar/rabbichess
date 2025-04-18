@@ -171,10 +171,24 @@ function initPuzzleGallery() {
             </div>
         `;
 
-        // Add click event to load puzzle
+        // Add click event to load puzzle or redirect to article pages
         puzzleCard.addEventListener('click', () => {
-            currentPuzzleIndex = index;
-            loadCurrentPuzzle();
+            const pageMap = {
+                1: 'knight-fork-challenge.html',
+                2: 'bishops-deadly-pin.html',
+                3: 'queens-gambit.html',
+                4: 'rooks-revenge.html',
+                5: 'knights-double-attack.html',
+                6: 'bishops-discovery.html',
+                7: 'rooks-back-rank.html',
+                8: 'queens-sacrifice.html'
+            };
+            if (pageMap[puzzle.id]) {
+                window.location.href = pageMap[puzzle.id];
+            } else {
+                currentPuzzleIndex = index;
+                loadCurrentPuzzle();
+            }
         });
 
         puzzleGrid.appendChild(puzzleCard);

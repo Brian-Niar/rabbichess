@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bishop's Discovery - ChessMaster</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .article-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        img.article-image {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-chess-knight"></i>
+            <h1>ChessMaster</h1>
+        </div>
+        <div class="user-info">
+            <span id="usernameDisplay"></span>
+            <button id="logoutBtn" class="btn">Logout</button>
+        </div>
+    </header>
+    <div class="article-container">
+        <h1>Bishop's Discovery</h1>
+        <img src="images/current-puzzles/Bishop's-discovery.png" alt="Bishop's Discovery" class="article-image" />
+        <p>
+            A discovered attack occurs when moving one piece reveals an attack from another piece.
+            This challenge focuses on using your bishop to create powerful discovered attacks.
+        </p>
+        <p>
+            In this article, we will explore common discovered attack patterns and how to use them effectively.
+            Mastering discovered attacks can help you create unexpected threats and gain material advantage.
+        </p>
+        <p>
+            Practice spotting discovered attack opportunities and learn to use them in your games.
+        </p>
+        <a href="dashboard.html" class="back-link">&larr; Back to Dashboard</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('user'));
+            if (!user) {
+                window.location.href = 'index.html';
+                return;
+            }
+            document.getElementById('usernameDisplay').textContent = user.username;
+            document.getElementById('logoutBtn').addEventListener('click', () => {
+                localStorage.removeItem('user');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>
