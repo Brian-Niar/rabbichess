@@ -305,4 +305,98 @@ header {
     #chessboard {
         max-width: 300px;
     }
-} 
+}
+
+/* Login Page Styles */
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.chess-logo {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.login-form h2 {
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="email"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.login-form .btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: #3498db;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.login-form .btn:hover {
+    background-color: #2980b9;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.register-link a {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.quick-access {
+    margin-top: 25px;
+}
+
+.quick-access .btn.secondary {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    background-color: #2c3e50;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.quick-access .btn.secondary:hover {
+    background-color: #1a252f;
+}

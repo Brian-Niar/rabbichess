@@ -123,12 +123,30 @@
                 </div>
                 <div class="stat-card">
                     <h3>Success Rate</h3>
-                    <p id="successRate">0%</p>
+        <p id="successRate">0%</p>
+        <script>
+            // Update success rate from localStorage by adding to existing value
+            document.addEventListener('DOMContentLoaded', () => {
+                const score = localStorage.getItem('latestQuizScore');
+                if (score !== null) {
+                    // Assuming total questions is 10, calculate percentage
+                    const percentage = (parseInt(score) / 10) * 100;
+                    const successRateElem = document.getElementById('successRate');
+                    let currentRate = parseInt(successRateElem.textContent) || 0;
+                    let newRate = currentRate + percentage;
+                    successRateElem.textContent = newRate.toFixed(0) + '%';
+                }
+            });
+        </script>
                 </div>
                 <div class="stat-card">
                     <h3>Current Streak</h3>
                     <p id="currentStreak">0</p>
                 </div>
+            </div>
+
+            <div class="quiz-button-container" style="text-align:center; margin: 20px 0;">
+                <a href="quiz.html" class="btn">Take Quiz</a>
             </div>
 
             <!-- Active Puzzle Panel -->

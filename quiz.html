@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChessMaster - Quiz</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        /* Quiz Section Styles */
+        .quiz-section {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .quiz-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        .quiz-question.fade-out {
+            opacity: 0;
+        }
+        .quiz-options {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        .quiz-options.fade-out {
+            opacity: 0;
+        }
+        .quiz-options li {
+            margin-bottom: 10px;
+        }
+        .quiz-options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .quiz-controls {
+            display: flex;
+            gap: 15px;
+        }
+        .quiz-score {
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .nav-back {
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .nav-back a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 600;
+        }
+        .nav-back a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-back">
+        <a href="dashboard.html">&larr; Back to Dashboard</a>
+    </div>
+    <div class="quiz-section" id="quizSection">
+        <h2>Chess Quiz</h2>
+        <div class="quiz-question" id="quizQuestion"></div>
+        <ul class="quiz-options" id="quizOptions"></ul>
+        <div class="quiz-controls">
+            <!-- Removed Previous button -->
+            <button id="nextQuestionBtn" class="btn">Next</button>
+            <button id="submitQuizBtn" class="btn" style="display:none;">Submit</button>
+        </div>
+        <div class="quiz-score" id="quizScore" style="display:none;"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
