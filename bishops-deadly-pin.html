@@ -50,11 +50,10 @@
 <body>
     <header>
         <div class="logo">
-            <i class="fas fa-chess-knight"></i>
-            <h1>ChessMaster</h1>
+            <img src="images/new-logo.png" alt="RabbiChessClub Logo" style="object-fit: contain; width: 70px; height: 70px;" />
+            
         </div>
         <div class="user-info">
-            <span id="usernameDisplay"></span>
             <button id="logoutBtn" class="btn">Logout</button>
         </div>
     </header>
@@ -72,7 +71,44 @@
         <p>
             Practice recognizing pin opportunities and learn how to capitalize on them to improve your tactical skills.
         </p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <figure style="width: 30%; margin: 0;">
+                <img src="images/puzzles/bishop-pin1.png" alt="Bishop Pin Example 1" style="width: 100%;" />
+                <figcaption style="text-align: center; font-size: 0.9rem; margin-top: 4px;">Example 1: Basic Pin</figcaption>
+            </figure>
+            <figure style="width: 30%; margin: 0;">
+                <img src="images/puzzles/bishop-pin2.png" alt="Bishop Pin Example 2" style="width: 100%;" />
+                <figcaption style="text-align: center; font-size: 0.9rem; margin-top: 4px;">Example 2: Pin with Pressure</figcaption>
+            </figure>
+            <figure style="width: 30%; margin: 0;">
+                <img src="images/puzzles/bishop-pin3.png" alt="Bishop Pin Example 3" style="width: 100%;" />
+                <figcaption style="text-align: center; font-size: 0.9rem; margin-top: 4px;">Example 3: Pin Leading to Win</figcaption>
+            </figure>
+            <figure style="width: 30%; margin: 0;">
+                <img src="images/puzzles/bishop-pin4.png" alt="Bishop Pin Example 4" style="width: 100%;" />
+                <figcaption style="text-align: center; font-size: 0.9rem; margin-top: 4px;">Example 4: Pin on Queen</figcaption>
+            </figure>
+            <figure style="width: 30%; margin: 0;">
+                <img src="images/puzzles/bishop-pin5.png" alt="Bishop Pin Example 5" style="width: 100%;" />
+                <figcaption style="text-align: center; font-size: 0.9rem; margin-top: 4px;">Example 5: Pin with Discovered Attack</figcaption>
+            </figure>
+            <figure style="width: 30%; margin: 0;">
+                <img src="images/puzzles/bishop-pin6.png" alt="Bishop Pin Example 6" style="width: 100%;" />
+                <figcaption style="text-align: center; font-size: 0.9rem; margin-top: 4px;">Example 6: Pin Leading to Checkmate</figcaption>
+            </figure>
+        </div>
         <a href="dashboard.html" class="back-link">&larr; Back to Dashboard</a>
+        <nav style="margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
+            <h3>Explore Other Challenges</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li><a href="queens-gambit.html">Queen's Gambit</a></li>
+                <li><a href="rooks-revenge.html">Rook's Revenge</a></li>
+                <li><a href="knights-double-attack.html">Knight's Double Attack</a></li>
+                <li><a href="bishops-discovery.html">Bishop's Discovery</a></li>
+                <li><a href="rooks-back-rank.html">Rook's Back Rank</a></li>
+                <li><a href="queens-sacrifice.html">Queen's Sacrifice</a></li>
+            </ul>
+        </nav>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <script>

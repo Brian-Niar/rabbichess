@@ -16,6 +16,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load and display puzzles
     loadPuzzles();
+
+    // Setup hint button popup for best move
+    const hintBtn = document.getElementById('hintBtn');
+    const hintModal = document.getElementById('hintModal');
+    const hintText = document.getElementById('hintText');
+    const closeBtn = hintModal.querySelector('.close');
+
+    hintBtn.addEventListener('click', () => {
+        const puzzleNumber = parseInt(document.getElementById('puzzleNumber').textContent);
+        const puzzle = puzzles.find(p => p.id === puzzleNumber);
+        const bestMove = puzzle ? puzzle.hint : 'No hint available';
+        hintText.textContent = `Best move: ${bestMove}`;
+        hintModal.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        hintModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === hintModal) {
+            hintModal.style.display = 'none';
+        }
+    });
 });
 
 // Logout functionality
@@ -56,7 +80,7 @@ const puzzles = [
         difficulty: "medium",
         image: "images/current-puzzles/Bishop's-Deadly-Pin.png",
         description: "Great position! Can you find a way to restrict your opponent's pieces?",
-        hint: "Use your bishop to pin the queen to the king"
+        hint: "Use your bishop to pin the knight to the king"
     },
     {
         id: 3,
@@ -64,7 +88,7 @@ const puzzles = [
         difficulty: "hard",
         image: "images/current-puzzles/Queen's-gambit.png",
         description: "Challenge yourself! Sometimes the best move is the most unexpected one.",
-        hint: "Start with a queen sacrifice"
+        hint: "Consider sacrificing your queen for a better position"
     },
     {
         id: 4,
@@ -72,7 +96,7 @@ const puzzles = [
         difficulty: "medium",
         image: "images/current-puzzles/Rook's-revenge.png",
         description: "You're doing great! Look for a way to put pressure on your opponent's position.",
-        hint: "Look for a move that threatens the queen"
+        hint: "Use your rook to attack the back rank"
     },
     {
         id: 5,
