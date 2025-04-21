@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@eslint/eslintrc": "^3.3.1"
+  }
+}
