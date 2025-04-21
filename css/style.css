@@ -320,6 +320,21 @@ header {
     }
 }
 
+@media (min-width: 700px) {
+    .blog-post video {
+        width: 35vw !important;
+    }
+}
+
+.full-article img {
+    width: 50% !important;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Login Page Styles */
 .login-container {
     max-width: 400px;
